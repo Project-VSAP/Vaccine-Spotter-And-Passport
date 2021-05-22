@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>QR Code</title>
+    </head>
+    <body>
+    {% extends "layout.html" %}
+    {% block content %}
+        <div class="qr_code">
+            <h1>Your QR Code:</h1>
+            <img src="{{ url_for('static', filename='qr.png') }}">
+        </div>
+    {% endblock %}
+    </body>
+</html>

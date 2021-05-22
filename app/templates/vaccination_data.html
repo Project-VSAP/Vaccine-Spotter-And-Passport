@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vaccination Data from QR Code</title>
+    </head>
+    <body>
+    {% extends "layout.html" %}
+    {% block content %}
+        <div class="vaccination_data">
+            <h1>Vaccination Data</h1>
+            <p>Last Name: {{last_name}}</p>
+            <p>First Name: {{first_name}}</p>
+            <p>Middle Initial: {{middle_initial}}</p>
+            <p>Date of Birth: {{date_of_birth}}</p>
+            <p>Doses:</p>
+            <div class="vaccination_dose">
+                <p>Product Name/Manufacturer: {{dose_1_product_name_manufacturer}}</p>
+                <p>Lot Number: {{dose_1_lot_number}}</p>
+                <p>Date: {{dose_1_date}}</p>
+                <p>Healthcare Professional or Clinic Site: {{dose_1_healthcare_professional_or_clinic_site}}</p>
+            </div>
+
+            <div class="vaccination_dose">
+                <p>Product Name/Manufacturer: {{dose_2_product_name_manufacturer}}</p>
+                <p>Lot Number: {{dose_2_lot_number}}</p>
+                <p>Date: {{dose_2_date}}</p>
+                <p>Healthcare Professional or Clinic Site: {{dose_2_healthcare_professional_or_clinic_site}}</p>
+            </div>
+        </div>
+    {% endblock %}
+    </body>
+</html>
