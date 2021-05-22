@@ -3,7 +3,6 @@ import segno
 import json
 from urllib.parse import urlencode, parse_qs
 import ast
-import sql_database
 
 app = Flask(__name__)
 
