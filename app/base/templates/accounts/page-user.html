@@ -1,0 +1,243 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page User {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Edit Profile</h5>
+          <h6 class="card-category">
+                {% if msg %}
+                  <span class="text-danger">{{ msg | safe }}</span>
+                {% endif %}
+          </h6>
+      </div>
+      <div class="card-body">
+          <form role="form" method="get|post" action="">
+          <div class="row">
+            <div class="col-md-1 px-md-1">
+              <div class="form-group">
+                <label>UserID</label>
+                {{ form.id(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Username</label>
+                {{ form.username(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Password</label>
+                {{ form.password(class="form-control", type="password") }}
+              </div>
+            </div>
+            <div class="col-md-4 pl-md-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                {{ form.email(class="form-control", type="email") }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 pr-md-1">
+              <div class="form-group">
+                <label>First Name</label>
+                {{ form.first_name(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-2 px-md-1">
+              <div class="form-group">
+                <label>Middle Initial</label>
+                {{ form.middle_initial(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-5 pl-md-1">
+              <div class="form-group">
+                <label>Last Name</label>
+                {{ form.last_name(class="form-control") }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12, pr-md-1">
+              <div class="form-group">
+                <label>Date of Birth</label>
+                {{ form.dob(class="form-control"), type="date" }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #1</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                {{ form.dose_1_product_name_manufacturer(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                {{ form.dose_1_lot_number(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                {{ form.dose_1_date(class="form-control"), type="date" }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                {{ form.dose_1_healthcare_professional_or_clinic_site(class="form-control") }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #2</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                {{ form.dose_2_product_name_manufacturer(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                {{ form.dose_2_lot_number(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                {{ form.dose_2_lot_number(class="form-control"), type="date" }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                {{ form.dose_2_healthcare_professional_or_clinic_site(class="form-control") }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #3</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                {{ form.dose_3_product_name_manufacturer(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                {{ form.dose_3_lot_number(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                {{ form.dose_3_date(class="form-control"), type="date" }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                {{ form.dose_3_healthcare_professional_or_clinic_site(class="form-control") }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #4</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                {{ form.dose_4_product_name_manufacturer(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                {{ form.dose_4_lot_number(class="form-control") }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                {{ form.dose_4_date(class="form-control"), type="date" }}
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                {{ form.dose_4_healthcare_professional_or_clinic_site(class="form-control") }}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button type="submit" name="edit_profile" class="btn btn-fill btn-primary">Save</button>
+      </div>
+    </div>
+    </div>
+  <div class="col-md-4">
+    <div class="card card-user">
+      <div class="card-body">
+        <p class="card-text">
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              <img class="avatar" src="/static/assets/img/emilyz.jpg" alt="Bill Gates photo - when buys a Linux.">
+              <h5 class="title">
+                {{ current_user.username }}
+              </h5>
+            </a>
+            <p class="description">
+              {{ current_user.email }}
+            </p>
+          </div>
+        </p>
+        <div class="card-description">
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="button-container">
+          <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
+            <i class="fab fa-facebook"></i>
+          </button>
+          <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
+            <i class="fab fa-google-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -1,0 +1,239 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page User {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Edit Profile</h5>
+      </div>
+      <div class="card-body">
+        <form role="form" method="get|post" action="">
+          <div class="row">
+            <div class="col-md-1 px-md-1">
+              <div class="form-group">
+                <label>UserID</label>
+                <input type="text" class="form-control" disabled="" value="{{ current_user.id }}">
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username_edit" name="username" class="form-control" disabled="" value="{{ current_user.username }}">
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password_edit" name="password" required="" placeholder="Confirm password" class="form-control" value="">
+              </div>
+            </div>
+            <div class="col-md-4 pl-md-1">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" id="email_edit" name="email" required="" class="form-control" value="{{ current_user.email }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 pr-md-1">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" required="" id="first_name_edit" name="first_name" class="form-control" placeholder="First Name" value="{{ current_user.first_name }}">
+              </div>
+            </div>
+            <div class="col-md-2 px-md-1">
+              <div class="form-group">
+                <label>Middle Initial</label>
+                <input type="text" class="form-control" id="middle_initial_edit" name="middle_initial" placeholder="M.I." value="{{ current_user.middle_initial }}">
+              </div>
+            </div>
+            <div class="col-md-5 pl-md-1">
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" required="" id="last_name_edit" name="last_name" class="form-control" placeholder="Last Name" value="{{ current_user.last_name }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12, pr-md-1">
+              <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" id="dob_edit" name="dob" class="form-control" value="{{ current_user.dob }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #1</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                <input type="text" id="dose_1_product_name_manufacturer_edit" name="dose_1_product_name_manufacturer" class="form-control" placeholder="Product Name/Manufacturer" value="{{ current_user.dose_1_product_name_manufacturer }}">
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                <input type="text" id="dose_1_lot_number_edit" name="dose_1_lot_number" class="form-control" placeholder="Lot Number" value="{{ current_user.dose_1_lot_number }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="dose_1_date_edit" name="dose_1_date" class="form-control" value="{{ current_user.dose_1_date }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                <input type="text" id="dose_1_healthcare_professional_or_clinic_site_edit" name="dose_1_healthcare_professional_or_clinic_site" class="form-control" placeholder="Healthcare Professional or Clinic Site" value="{{ current_user.dose_1_healthcare_professional_or_clinic_site }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #2</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                <input type="text" id="dose_2_product_name_manufacturer_edit" name="dose_2_product_name_manufacturer" class="form-control" placeholder="Product Name/Manufacturer" value="{{ current_user.dose_2_product_name_manufacturer }}">
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                <input type="text" id="dose_2_lot_number_edit" name="dose_2_lot_number" class="form-control" placeholder="Lot Number" value="{{ current_user.dose_2_lot_number }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="dose_2_date_edit" name="dose_2_date" class="form-control" value="{{ current_user.dose_2_date }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                <input type="text" id="dose_2_healthcare_professional_or_clinic_site_edit" name="dose_2_healthcare_professional_or_clinic_site" class="form-control" placeholder="Healthcare Professional or Clinic Site" value="{{ current_user.dose_2_healthcare_professional_or_clinic_site }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #3</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                <input type="text" id="dose_3_product_name_manufacturer_edit" name="dose_3_product_name_manufacturer" class="form-control" placeholder="Product Name/Manufacturer" value="{{ current_user.dose_3_product_name_manufacturer }}">
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                <input type="text" id="dose_3_lot_number_edit" name="dose_3_lot_number" class="form-control" placeholder="Lot Number" value="{{ current_user.dose_3_lot_number }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="dose_3_date_edit" name="dose_3_date" class="form-control" value="{{ current_user.dose_3_date }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                <input type="text" id="dose_3_healthcare_professional_or_clinic_site_edit" name="dose_3_healthcare_professional_or_clinic_site" class="form-control" placeholder="Healthcare Professional or Clinic Site" value="{{ current_user.dose_3_healthcare_professional_or_clinic_site }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h6 class="title">Dose #4</h6>
+          </div>
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Product Name/Manufacturer</label>
+                <input type="text" id="dose_4_product_name_manufacturer_edit" name="dose_4_product_name_manufacturer" class="form-control" placeholder="Product Name/Manufacturer" value="{{ current_user.dose_4_product_name_manufacturer }}">
+              </div>
+            </div>
+            <div class="col-md-3 px-md-1">
+              <div class="form-group">
+                <label>Lot Number</label>
+                <input type="text" id="dose_4_lot_number_edit" name="dose_4_lot_number" class="form-control" placeholder="Lot Number" value="{{ current_user.dose_4_lot_number }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="dose_4_date_edit" name="dose_4_date" class="form-control" value="{{ current_user.dose_4_date }}">
+              </div>
+            </div>
+            <div class="col-md-3 pl-md-1">
+              <div class="form-group">
+                <label>Healthcare Professional or Clinic Site</label>
+                <input type="text" id="dose_4_healthcare_professional_or_clinic_site_edit" name="dose_4_healthcare_professional_or_clinic_site" class="form-control" placeholder="Healthcare Professional or Clinic Site" value="{{ current_user.dose_4_healthcare_professional_or_clinic_site }}">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button type="submit" name="edit_profile" class="btn btn-fill btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card card-user">
+      <div class="card-body">
+        <p class="card-text">
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              <img class="avatar" src="/static/assets/img/emilyz.jpg" alt="Bill Gates photo - when buys a Linux.">
+              <h5 class="title">
+                {{ current_user.username }}
+              </h5>
+            </a>
+            <p class="description">
+              {{ current_user.email }}
+            </p>
+          </div>
+        </p>
+        <div class="card-description">
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="button-container">
+          <button href="javascript:void(0)" class="btn btn-icon btn-round btn-facebook">
+            <i class="fab fa-facebook"></i>
+          </button>
+          <button href="javascript:void(0)" class="btn btn-icon btn-round btn-twitter">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="javascript:void(0)" class="btn btn-icon btn-round btn-google">
+            <i class="fab fa-google-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

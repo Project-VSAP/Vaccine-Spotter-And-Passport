@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Maps {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="card card-plain">
+          <div class="card-header">
+              Find a Place with COVID-19 Vaccines Available
+          </div>
+          <div class="card-footer">
+           Enter your Zip Code on the bottom search key and hover/click on a red dot to see info about available vaccination.
+          </div>
+          <div class="card-body">
+              <iframe width="100%" height="720" frameborder="0" src="https://yair-k.carto.com/builder/ca0dd014-d974-42e9-b13c-170c222e17ef/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initGoogleMaps();
+    });
+  </script>
+  
+{% endblock javascripts %}

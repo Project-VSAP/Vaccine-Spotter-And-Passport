@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\base",
+    "\\app\\base\\static",
+    "\\app\\base\\static\\assets",
+    "\\app\\base\\static\\assets\\scss",
+    "\\app\\base\\static\\assets\\scss\\black-dashboard",
+    "\\app\\base\\static\\assets\\scss\\black-dashboard\\custom",
+    "\\app\\base\\static\\assets\\scss\\black-dashboard\\custom\\cards",
+    "\\app\\base\\static\\assets\\scss\\black-dashboard\\custom\\mixins"
+  ],
+  "SelectedNode": "\\app\\base\\static\\assets\\scss\\black-dashboard\\custom\\mixins\\_badges.scss",
+  "PreviewInSolutionExplorer": false
+}
