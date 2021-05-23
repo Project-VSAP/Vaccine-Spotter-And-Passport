@@ -19,17 +19,17 @@ As more and more places are being openned up, there is an increasing need for an
 We used the [Flask Framework](https://flask.palletsprojects.com/en/2.0.x/) as a base for our website as we were all experienced with python and were eager to learn more about this framework. Here is all the list of modules we used:
 
 >flask == 1.1.2
-flask_login == 0.5.0
-flask_migrate == 2.7.0
-flask_mysqldb == 1.2.9
-flask_wtf == 0.14.3
-flask_sqlalchemy == 2.4.4
-sqlalchemy == 1.3.23
-psycopg2
-email_validator == 1.1.2
-python-decouple == 3.4
-gunicorn == 20.0.4
-jinja2 == 2.11.3
+>flask_login == 0.5.0
+>flask_migrate == 2.7.0
+>flask_mysqldb == 1.2.9
+>flask_wtf == 0.14.3
+>flask_sqlalchemy == 2.4.4
+>sqlalchemy == 1.3.23
+>psycopg2
+>email_validator == 1.1.2
+>python-decouple == 3.4
+>gunicorn == 20.0.4
+>jinja2 == 2.11.3
 
 As well as making it perform good, we also wanted for it to look good, so we added in along with the Flask basework lots of design with CSS and JS. The website in the end is a sleek and good looking admin pannel as well as hyper-responsive with interactive widgets, and scalable assets. It also is mobile-friendly.
 
