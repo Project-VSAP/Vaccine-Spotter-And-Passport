@@ -16,6 +16,7 @@ As more and more places are being openned up, there is an increasing need for an
 ![enter image description here](https://media.discordapp.net/attachments/844733789011836948/845987840571605062/thumnail1.png?width=1080&height=539)
 ![enter image description here](https://media.discordapp.net/attachments/844733789011836948/845987840835715112/thumnail2.png?width=1078&height=559)![enter image description here](https://media.discordapp.net/attachments/844733789011836948/845987844476633108/thumnail4.png?width=1080&height=544)
 ![enter image description here](https://media.discordapp.net/attachments/844733789011836948/845987849602203658/thumnail5.png?width=1080&height=507)![enter image description here](https://media.discordapp.net/attachments/844733789011836948/845988330046881854/thumnail6.png?width=1080&height=537)
+![enter image description here](https://media.discordapp.net/attachments/844733789011836948/845987844392353792/thumnail3.png?width=1080&height=541)
 
 ## How we built it:
 We used the [Flask Framework](https://flask.palletsprojects.com/en/2.0.x/) as a base for our website as we were all experienced with python and were eager to learn more about this framework. Here is all the list of modules we used:
