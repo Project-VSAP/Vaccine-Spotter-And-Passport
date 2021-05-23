@@ -1,0 +1,76 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page Blank {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">Population One Or More Vaccine Dose</h6>
+                    <iframe src="https://covid19canada.maps.arcgis.com/apps/opsdashboard/index.html#/cfbd8528810042d38d4e184e6731f2f9" height="550" width="100%"></iframe>
+                    <h4 class="card-title">
+                    </h4>
+                </div>
+            </div>
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">Daily Case Trends (Canada)</h6>
+                    <iframe src="https://covid19canada.maps.arcgis.com/apps/opsdashboard/index.html#/7856c4762c7443bab2caba8b3c16af64" height="500" width="100%"></iframe>
+                    <h4 class="card-title">
+                    </h4>
+                </div>
+            </div>
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">Daily Cases (International)</h6>
+                    <iframe src="https://covid19canada.maps.arcgis.com/apps/opsdashboard/index.html#/51d7d96fa29847d099b96d642202c278" height="550" width="100%"></iframe>
+                    <h4 class="card-title">
+                    </h4>
+                </div>
+            </div>
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">COVID-19 Case Demographics</h6>
+                    <iframe src="https://covid19canada.maps.arcgis.com/apps/opsdashboard/index.html#/2772c0489f43411ca9493fc5888fbe67" height="550" width="100%"></iframe>
+                    <h4 class="card-title">
+                    </h4>
+                </div>
+                <div class="card card-profile">
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">COVID-19 Case Tracker</h6>
+                        <iframe src="https://covid19canada.maps.arcgis.com/apps/Media/index.html?appid=f6a7cc952b944e2c827760c23d4e02e9" height="550" width="100%"></iframe>
+                        <h4 class="card-title">
+                        </h4>
+                    </div>
+                </div>
+                <div class="card card-profile">
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">COVID-19 Case Timeline</h6>
+                        <iframe src="https://experience.arcgis.com/experience/4ab8757241cc4d3fab81c8f86a501ce9" height="550" width="100%"></iframe>
+                        <h4 class="card-title">
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-profile">
+                <div class="card-body">
+                    <h6 class="card-category text-gray">COVID-19 Self Check</h6>
+                    <h4 class="card-title">
+                        <div data-cdc-widget='healthBot' data-cdc-theme='theme1' class='cdc-widget-color-blue' data-cdc-language='en-us'></div>
+                        <script src='https://t.cdc.gov/1M1B'></script>
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

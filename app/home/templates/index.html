@@ -1,0 +1,394 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="row">
+
+      <div class="col-12">
+        <div class="card card-chart">
+          <div class="card-header ">
+            <div class="row">
+              <div class="col-sm-6 text-left">
+                <h5 class="card-category">Total Shipments (Per Province)</h5>
+                <h2 class="card-title">VACCINES</h2>
+              </div>
+              <div class="col-sm-6">
+                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                  <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                    <input type="radio" name="options" checked>
+                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Pzifer</span>
+                    <span class="d-block d-sm-none">
+                      <i class="tim-icons icon-single-02"></i>
+                    </span>
+                  </label>
+                  <label class="btn btn-sm btn-primary btn-simple" id="1">
+                    <input type="radio" class="d-none d-sm-none" name="options">
+                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Moderna</span>
+                    <span class="d-block d-sm-none">
+                      <i class="tim-icons icon-gift-2"></i>
+                    </span>
+                  </label>
+                  <label class="btn btn-sm btn-primary btn-simple" id="2">
+                    <input type="radio" class="d-none" name="options">
+                    <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Johnson & Johnson</span>
+                    <span class="d-block d-sm-none">
+                      <i class="tim-icons icon-tap-02"></i>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="chartBig1"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card card-chart">
+          <div class="card-header">
+            <h5 class="card-category">Total Cases (Canada)</h5>
+            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 1,347,445</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="chartLinePurple"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card card-chart">
+          <div class="card-header">
+            <h5 class="card-category">Deaths (Total)</h5>
+            <h3 class="card-title"><i class="tim-icons icon-atom text-info"></i> 25,162</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="CountryChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card card-chart">
+          <div class="card-header">
+            <h5 class="card-category">Vaccinations</h5>
+            <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 18,748,185</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="chartLineGreen"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="card card-tasks">
+          <div class="card-header ">
+            <h6 class="title d-inline">Tasks(5)</h6>
+            <p class="card-category d-inline">today</p>
+            <div class="dropdown">
+              <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-toggle="dropdown">
+                <i class="tim-icons icon-settings-gear-63"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#pablo">Action</a>
+                <a class="dropdown-item" href="#pablo">Another action</a>
+                <a class="dropdown-item" href="#pablo">Something else</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body ">
+            <div class="table-full-width table-responsive">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title">Self Isolation</p>
+                      <p class="text-muted">If you have any COVID-19 Symptoms, or a positive test result stay at home or at a health care facility</p>
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                        <i class="tim-icons icon-pencil"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="" checked="">
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title">Contact</p>
+                      <p class="text-muted">Contact your local public health authority. They may be able to help you notify your contacts and give you your next steps.</p>
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                        <i class="tim-icons icon-pencil"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title">Thinking Back</p>
+                      <p class="text-muted">Think back to 48 hours before you started to feel unwell, or if you dont have any symptoms, 48 hhours before you took your COVID-19 test until you began self-isolation.</p>
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                        <i class="tim-icons icon-pencil"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title">Contact</p>
+                      <p class="text-muted">Contact people whom you had physical contact or spent more than 15 minutes at an unsafe distance.</p>
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                        <i class="tim-icons icon-pencil"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title">Public Place Contact</p>
+                      <p class="text-muted">If you visited a store, health facility or other close and crowded establishment during this period, please call and let them know the day and time you were there.</p>
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                        <i class="tim-icons icon-pencil"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          <span class="form-check-sign">
+                            <span class="check"></span>
+                          </span>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="title">Vaccine Symptoms</p>
+                      <p class="text-muted">If you experience any harsh symptoms after taking your vaccine, call 911 or any emergincy provider.</p>
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
+                        <i class="tim-icons icon-pencil"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="card ">
+          <div class="card-header">
+            <h4 class="card-title"> Worldwide Cases</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table tablesorter " id="">
+                <thead class=" text-primary">
+                  <tr>
+                    <th>
+                      Country
+                    </th>
+                    <th>
+                      Cases
+                    </th>
+                    <th>
+                      Recovered
+                    </th>
+                    <th class="text-center">
+                      Deaths
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      United States
+                    </td>
+                    <td>
+                      33.1M
+                    </td>
+                    <td>
+                      N/A
+                    </td>
+                    <td class="text-center">
+                      589K
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      India
+                    </td>
+                    <td>
+                      26.3M
+                    </td>
+                    <td>
+                      23.1M
+                    </td>
+                    <td class="text-center">
+                      296K
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Brazil
+                    </td>
+                    <td>
+                      16M
+                    </td>
+                    <td>
+                      14.1M
+                    </td>
+                    <td class="text-center">
+                      446K
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      France
+                    </td>
+                    <td>
+                      5.92M
+                    </td>
+                    <td>
+                      361K
+                    </td>
+                    <td class="text-center">
+                      108K
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Turkey
+                    </td>
+                    <td>
+                      5.18M
+                    </td>
+                    <td>
+                      5.01M
+                    </td>
+                    <td class="text-center">
+                      116K
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Russia
+                    </td>
+                    <td>
+                      4.93M
+                    </td>
+                    <td>
+                      4.55M
+                    </td>
+                    <td class="text-center">
+                      116K
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      United Kingdom
+                    </td>
+                    <td>
+                      4.46M
+                    </td>
+                    <td>
+                      N/A
+                    </td>
+                    <td class="text-center">
+                      128K
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+
+{% endblock javascripts %}

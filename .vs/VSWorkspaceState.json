@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\base",
+    "\\app\\base\\static",
+    "\\app\\base\\static\\assets",
+    "\\app\\base\\static\\assets\\js",
+    "\\app\\base\\static\\assets\\js\\core",
+    "\\app\\base\\static\\assets\\js\\plugins",
+    "\\app\\home",
+    "\\app\\home\\templates"
+  ],
+  "SelectedNode": "\\app\\__init__.py",
+  "PreviewInSolutionExplorer": false
+}
