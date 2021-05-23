@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/people</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="vaccinations" uuid="82cf15dd-a2ef-4327-8f93-b4a9246e66d9">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\michi\Documents\code\Vaccine-Spotter-And-Passport\app\vaccinations.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
